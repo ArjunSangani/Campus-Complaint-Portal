@@ -1,0 +1,10 @@
+[
+  {
+    "id": "CMP-JSON-001",
+    "studentName": "Sample Student",
+    "category": "Wi-Fi",
+    "title": "Network issue",
+    "status": "Pending",
+    "date": "2026-08-27"
+  }
+]

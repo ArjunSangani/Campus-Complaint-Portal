@@ -1,0 +1,326 @@
+:root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --panel2: #11161d;
+    --green: #00ff88;
+    --blue: #58a6ff;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --danger: #ff5c5c;
+    --warning: #ffd43b
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, Arial, sans-serif;
+    min-height: 100vh
+}
+
+h1,
+h2,
+h3,
+.navbar-brand,
+.terminal-label {
+    font-family: "JetBrains Mono", Consolas, monospace
+}
+
+.terminal-nav {
+    background: #11161d;
+    border-bottom: 1px solid var(--border)
+}
+
+.prompt,
+.accent {
+    color: var(--green)
+}
+
+.nav-link {
+    color: #c9d1d9 !important
+}
+
+.nav-link:hover {
+    color: var(--green) !important
+}
+
+.btn-terminal {
+    background: var(--green);
+    color: #07110b;
+    border: 1px solid var(--green);
+    font-weight: 700
+}
+
+.btn-terminal:hover {
+    background: #7dffbb;
+    color: #07110b;
+    transform: translateY(-1px)
+}
+
+.hero {
+    border-bottom: 1px solid var(--border);
+    background: radial-gradient(circle at 75% 20%, rgba(0, 255, 136, .09), transparent 30%), linear-gradient(180deg, #0d1117, #0b0f14);
+    padding: 70px 0
+}
+
+.terminal-label {
+    font-size: .78rem;
+    letter-spacing: .12em;
+    color: var(--green);
+    font-weight: 700
+}
+
+.terminal-card,
+.feature-card,
+.stat-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .18)
+}
+
+.terminal-top {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted);
+    font: 600 .8rem "JetBrains Mono";
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+    margin-bottom: 18px
+}
+
+.terminal-top span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #555
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 18px;
+    background: var(--green);
+    animation: blink 1s steps(2, end) infinite
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
+.section-heading {
+    margin-bottom: 22px
+}
+
+.stat-card {
+    padding: 22px;
+    text-align: center
+}
+
+.stat-card span {
+    display: block;
+    font: 700 2rem "JetBrains Mono";
+    color: var(--green)
+}
+
+.stat-card small {
+    color: var(--muted)
+}
+
+.feature-card {
+    padding: 26px
+}
+
+.feature-card h3 {
+    margin-top: 15px
+}
+
+.feature-card p {
+    color: var(--muted)
+}
+
+.feature-icon {
+    font: 700 1rem "JetBrains Mono";
+    color: var(--green);
+    border: 1px solid var(--green);
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px
+}
+
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 25px 0;
+    color: var(--muted);
+    font: 12px "JetBrains Mono"
+}
+
+.auth-wrap {
+    min-height: calc(100vh - 60px);
+    display: grid;
+    place-items: center;
+    padding: 30px
+}
+
+.auth-card {
+    width: min(520px, 100%);
+    padding: 30px
+}
+
+.terminal-input {
+    background: #0d1117 !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important
+}
+
+.terminal-input:focus {
+    border-color: var(--green) !important;
+    box-shadow: 0 0 0 .2rem rgba(0, 255, 136, .1) !important
+}
+
+.form-label {
+    font-weight: 600
+}
+
+.status-flow>div {
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--border);
+    color: var(--muted)
+}
+
+.status-flow b {
+    color: var(--green);
+    margin-right: 10px
+}
+
+.badge-status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 700
+}
+
+.status-pending {
+    background: rgba(255, 212, 59, .13);
+    color: var(--warning)
+}
+
+.status-progress {
+    background: rgba(88, 166, 255, .13);
+    color: var(--blue)
+}
+
+.status-resolved {
+    background: rgba(0, 255, 136, .13);
+    color: var(--green)
+}
+
+.status-rejected {
+    background: rgba(255, 92, 92, .13);
+    color: var(--danger)
+}
+
+.complaint-card {
+    height: 100%;
+    padding: 20px
+}
+
+.complaint-card h3 {
+    font-size: 1.05rem
+}
+
+.text-secondary {
+    color: var(--muted) !important
+}
+
+.terminal-modal {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border)
+}
+
+.accordion-item {
+    background: var(--panel);
+    color: var(--text);
+    border-color: var(--border)
+}
+
+.accordion-button {
+    background: var(--panel);
+    color: var(--text)
+}
+
+.accordion-button:not(.collapsed) {
+    background: #1c242e;
+    color: var(--green)
+}
+
+.accordion-button:focus {
+    box-shadow: none
+}
+
+.table {
+    --bs-table-bg: transparent
+}
+
+.table td,
+.table th {
+    border-color: var(--border)
+}
+
+.carousel-item {
+    min-height: 170px
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%
+}
+
+@media(max-width:768px) {
+    .hero {
+        padding: 45px 0
+    }
+
+    .display-3 {
+        font-size: 2.35rem
+    }
+
+    .auth-wrap {
+        padding: 18px
+    }
+
+    .terminal-card {
+        border-radius: 10px
+    }
+}
+
+
+.terminal-input.is-invalid {
+    border-color: #ff5c5c !important;
+    box-shadow: 0 0 0 .2rem rgba(255, 92, 92, .25) !important;
+}
+
+.alert-danger {
+    background-color: rgba(255, 92, 92, .15) !important;
+    border: 1px solid #ff5c5c !important;
+    color: #ff8585 !important;
+}
+
+.alert-success {
+    background-color: rgba(0, 255, 136, .15) !important;
+    border: 1px solid #00ff88 !important;
+    color: #00ff88 !important;
+}
